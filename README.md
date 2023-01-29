@@ -18,7 +18,7 @@ A REST API for sending emails built with Express in Node.js.
 1. Clone the repository:
 
 ```bash
-git clone <https://github.com/[username>]/send-email-api.git
+git clone https://github.com/TiagoRibeiro25/Send-Email-REST-API
 ```
 
 2. Install dependencies:

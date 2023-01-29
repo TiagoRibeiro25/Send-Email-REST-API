@@ -35,6 +35,8 @@ MAILJET_URL="https://api.mailjet.com/v3.1/send"
 MAILJET_PUBLIC_KEY="YOUR MAILJET PUBLIC KEY"
 MAILJET_SECRET_KEY="YOUR MAILJET SECRET KEY"
 
+MAILJET_FROM_EMAIL="THE EMAIL YOU WANT TO SEND FROM"
+
 API_ACCESS_TOKEN="A RANDOM STRING"
 
 EMAIL_DB_URI="YOUR MONGODB URI"
@@ -80,10 +82,7 @@ authorization: YOUR API_ACCESS_TOKEN
 
 ```JSON
 {
-   "From": { 
-      "Name": "Source Name",
-      "Email": "Source Email"
-   },
+   "From": "Source Name",
    "To": [
       {
          "Name": "Destination Name",

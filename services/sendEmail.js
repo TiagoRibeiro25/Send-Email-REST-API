@@ -4,7 +4,10 @@ export default async function SendEmail(email) {
    const data = JSON.stringify({
       Messages: [
          {
-            From: email.from,
+            From: {
+               Email: process.env.MAILJET_FROM_EMAIL,
+               Name: email.from,
+            },
             To: email.to,
             Subject: email.subject,
             TextPart: email.text,

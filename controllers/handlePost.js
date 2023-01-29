@@ -8,7 +8,7 @@ export async function handlePost(req, res) {
 
    const emailData = {
       status: "pending",
-      from: req.body.From, // Object {name, email}
+      from: req.body.From, // String
       to: req.body.To, // Array of objects [{name, email}]
       subject: req.body.Subject, // String
       text: req.body.Text, // String

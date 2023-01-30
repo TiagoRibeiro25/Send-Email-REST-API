@@ -54,23 +54,23 @@ npm run dev
 
 ### Get API Current Version
 
-Make a GET request to the `/api/v1/version` endpoint:
+Make a GET request to the `/api/version` endpoint:
 
 ```bash
-curl -X GET http://localhost:3000/api/v1/version
+curl -X GET http://localhost:3000/api/version
 ```
 
 ### Get API Status
 
-Make a GET request to the `/api/v1/status` endpoint:
+Make a GET request to the `/api/status` endpoint:
 
 ```bash
-curl -X GET http://localhost:3000/api/v1/status
+curl -X GET http://localhost:3000/api/status
 ```
 
 ### Send an Email
 
-Make a POST request to the `/api/v1/send` endpoint with the following:
+Make a POST request to the `/api/v2/send` endpoint with the following:
 
 - Headers:
 

@@ -1,4 +1,4 @@
-import { db } from "../server.js";
+import EmailsDB from "../models/EmailsDB.js";
 import SendEmail from "../services/sendEmail.js";
 
 export async function handlePost(req, res) {
@@ -40,6 +40,7 @@ export async function handlePost(req, res) {
 	});
 
 	// Store the information related to the email sent in the database
+	const db = new EmailsDB();
 	await db.storeEmail(emailData);
 	return res.status(responseInfo.status).json({ message: responseInfo.message });
 }

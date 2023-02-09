@@ -27,10 +27,13 @@ export default class EmailsDB {
 
 	async storeEmail(emailData) {
 		try {
+			await this.connect();
 			await this.collection.insertOne(emailData);
 			console.log("Email Stored in the DataBase");
 		} catch (error) {
 			console.error(error);
+		} finally {
+			await this.close();
 		}
 	}
 }

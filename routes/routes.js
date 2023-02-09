@@ -4,11 +4,11 @@ import { handlePost } from "../controllers/handlePost.js";
 const router = express.Router();
 
 router.get("/version", (req, res) => {
-   res.send("Email API v2");
+	res.json({ version: "Email API v2" });
 });
 
 router.get("/status", (req, res) => {
-   res.send("OK");
+	res.json({ status: "OK" });
 });
 
 router.post("/v2/send", handlePost);

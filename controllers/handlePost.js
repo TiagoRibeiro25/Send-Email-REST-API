@@ -1,8 +1,9 @@
+import config from "../config.js";
 import EmailsDB from "../models/EmailsDB.js";
 import SendEmail from "../services/sendEmail.js";
 
 export async function handlePost(req, res) {
-	if (req.headers.authorization !== process.env.API_ACCESS_TOKEN) {
+	if (req.headers.authorization !== config.API_ACCESS_TOKEN) {
 		return res.status(401).json({ message: "Access denied" });
 	}
 

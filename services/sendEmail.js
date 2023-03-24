@@ -1,11 +1,12 @@
 import axios from "axios";
+import config from "../config.js";
 
 export default async function SendEmail(email) {
 	const data = JSON.stringify({
 		Messages: [
 			{
 				From: {
-					Email: process.env.MAILJET_FROM_EMAIL,
+					Email: config.MAILJET_FROM_EMAIL,
 					Name: email.from,
 				},
 				To: email.to,
@@ -18,11 +19,11 @@ export default async function SendEmail(email) {
 	try {
 		await axios({
 			method: "post",
-			url: process.env.MAILJET_URL,
+			url: config.MAILJET_URL,
 			headers: { "Content-Type": "application/json" },
 			auth: {
-				username: process.env.MAILJET_PUBLIC_KEY,
-				password: process.env.MAILJET_SECRET_KEY,
+				username: config.MAILJET_PUBLIC_KEY,
+				password: config.MAILJET_SECRET_KEY,
 			},
 			data: data,
 		});

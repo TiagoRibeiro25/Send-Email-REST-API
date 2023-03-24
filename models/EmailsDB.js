@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
+import config from "../config.js";
 
 export default class EmailsDB {
 	constructor() {
-		this.uri = process.env.EMAIL_DB_URI;
-		this.client = new MongoClient(this.uri, {
+		this.client = new MongoClient(config.DB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});

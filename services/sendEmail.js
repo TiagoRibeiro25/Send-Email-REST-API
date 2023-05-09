@@ -11,7 +11,7 @@ export default async function SendEmail(email) {
 				},
 				To: email.to,
 				Subject: email.subject,
-				TextPart: email.text,
+				HTMLPart: email.text,
 			},
 		],
 	});
